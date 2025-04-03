@@ -1,3 +1,6 @@
+import { mockMotoresQuestions } from "@/lib/motores";
+import { mockReversoresQuestions } from "@/lib/reversores";
+
 export interface Answer {
   id: string;
   text: string;
@@ -14,6 +17,8 @@ export interface Question {
 
 // Datos de ejemplo para la aplicación
 export const mockQuestions: Question[] = [
+  ...mockReversoresQuestions,
+  ...mockMotoresQuestions,
   {
     id: "q1",
     text: "¿Cuántas carcasas tiene la cámara de combustión?",
@@ -188,8 +193,10 @@ export async function loadQuestionsFromPDF(
 export const categories = [
   "Todas",
   "Camaras de Combustión",
-  "Programación",
-  "Redes",
-  "Sistemas Operativos",
-  "Hardware",
+  "Motores Alternativos",
+  "Flujo Sónico",
+  "Helices",
+  "Diagram V-n",
+  "Motores a Reacción",
+  "Reversores",
 ];
