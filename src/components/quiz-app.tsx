@@ -13,7 +13,10 @@ export default function QuizApp() {
     Record<number, string[]>
   >({});
   const [isFinished, setIsFinished] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(defaultTime); // 5 minutes in seconds
+  const [timeLeft, setTimeLeft] = useState(defaultTime);
+  const [answeredQuestions, setAnsweredQuestions] = useState<
+    Record<number, "correct" | "incorrect" | "neutral">
+  >({});
 
   const currentQuestion = mockQuestions[currentQuestionIndex];
   const totalQuestions = mockQuestions.length;
@@ -25,18 +28,25 @@ export default function QuizApp() {
     }
   }, [timeLeft]);
 
+  const getAnswerStatus = (answerId: string) => {
+    if (!selectedAnswers[currentQuestionIndex]) return "neutral";
+
+    const isSelected = selectedAnswers[currentQuestionIndex].includes(answerId);
+    if (!isSelected) return "neutral";
+
+    const isCorrect = currentQuestion.correctAnswers.includes(answerId);
+    return isCorrect ? "correct" : "incorrect";
+  };
+
   const handleAnswerSelect = (answerId: string) => {
     const currentAnswers = selectedAnswers[currentQuestionIndex] || [];
 
-    // If the answer is already selected, remove it (for multiple correct answers)
     if (currentAnswers.includes(answerId)) {
       setSelectedAnswers({
         ...selectedAnswers,
         [currentQuestionIndex]: currentAnswers.filter((id) => id !== answerId),
       });
     } else {
-      // For single answer questions, replace the array
-      // For multiple answers, add to the array
       setSelectedAnswers({
         ...selectedAnswers,
         [currentQuestionIndex]: currentQuestion.multipleCorrect
@@ -47,6 +57,28 @@ export default function QuizApp() {
   };
 
   const handleNext = () => {
+    if (
+      selectedAnswers[currentQuestionIndex] &&
+      selectedAnswers[currentQuestionIndex].length > 0
+    ) {
+      const isCorrect =
+        selectedAnswers[currentQuestionIndex].every((answer) =>
+          currentQuestion.correctAnswers.includes(answer),
+        ) &&
+        currentQuestion.correctAnswers.length ===
+          selectedAnswers[currentQuestionIndex].length;
+
+      setAnsweredQuestions((prev) => ({
+        ...prev,
+        [currentQuestionIndex]: isCorrect ? "correct" : "incorrect",
+      }));
+    } else {
+      setAnsweredQuestions((prev) => ({
+        ...prev,
+        [currentQuestionIndex]: "incorrect",
+      }));
+    }
+
     if (currentQuestionIndex < totalQuestions - 1) {
       setTimeLeft(defaultTime);
       setCurrentQuestionIndex(currentQuestionIndex + 1);
@@ -55,16 +87,11 @@ export default function QuizApp() {
     }
   };
 
-  const handleFinish = () => {
-    setIsFinished(true);
-    // Aquí podrías calcular la puntuación y mostrar resultados
-  };
-
   const handleExit = () => {
     if (confirm("¿Estás seguro de que deseas salir? Tu progreso se perderá.")) {
-      // Reiniciar el quiz o redirigir a la página principal
       setCurrentQuestionIndex(0);
       setSelectedAnswers({});
+      setAnsweredQuestions({});
       setIsFinished(false);
     }
   };
@@ -79,6 +106,7 @@ export default function QuizApp() {
             onClick={() => {
               setCurrentQuestionIndex(0);
               setSelectedAnswers({});
+              setAnsweredQuestions({});
               setIsFinished(false);
               setTimeLeft(defaultTime);
             }}
@@ -90,34 +118,39 @@ export default function QuizApp() {
       </div>
     );
   }
+  const isAnswerSelected = (answerId: string) => {
+    return (selectedAnswers[currentQuestionIndex] || []).includes(answerId);
+  };
 
   return (
     <div className="w-full max-w-md mx-auto p-4">
       <div className="bg-blue-600 rounded-t-3xl p-6 text-white">
         <div className="flex justify-between items-center mb-2">
           <h1 className="text-2xl font-bold">
-            Question {currentQuestionIndex + 1}
+            Pregunta {currentQuestionIndex + 1}
           </h1>
           <Timer timeLeft={timeLeft} setTimeLeft={setTimeLeft} />
         </div>
         <ProgressBar
           currentQuestion={currentQuestionIndex}
           totalQuestions={totalQuestions}
+          answeredQuestions={answeredQuestions}
         />
       </div>
 
       <QuestionCard
-        handleNext={handleNext}
         question={currentQuestion}
         selectedAnswers={selectedAnswers[currentQuestionIndex] || []}
         onAnswerSelect={handleAnswerSelect}
+        getAnswerStatus={getAnswerStatus} // ✅ Aquí lo pasamos bien
+        isAnswerSelected={isAnswerSelected}
       />
 
       <button
         onClick={handleNext}
         className="bg-blue-600 text-white py-3 px-6 rounded-lg w-full mb-4"
       >
-        Next
+        Siguiente
       </button>
 
       <div className="flex justify-center">
@@ -125,7 +158,7 @@ export default function QuizApp() {
           onClick={handleExit}
           className="bg-gray-200 text-gray-700 py-2 px-8 rounded-lg"
         >
-          Exit
+          Salir
         </button>
       </div>
     </div>

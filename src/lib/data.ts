@@ -173,12 +173,9 @@ export const mockQuestions: Question[] = [
   },
 ];
 
-// Función para cargar preguntas desde un PDF (simulada)
 export async function loadQuestionsFromPDF(
   pdfUrl: string,
 ): Promise<Question[]> {
-  // Esta función simula la carga de preguntas desde un PDF
-  // En una implementación real, utilizarías una biblioteca como pdf.js
   console.log(`Cargando preguntas desde: ${pdfUrl}`);
 
   // Simulamos un retraso de red
@@ -188,10 +185,9 @@ export async function loadQuestionsFromPDF(
   return mockQuestions;
 }
 
-// Categorías disponibles
 export const categories = [
   "Todas",
-  "Informática",
+  "Camaras de Combustión",
   "Programación",
   "Redes",
   "Sistemas Operativos",

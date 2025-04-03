@@ -1,40 +1,29 @@
 interface ProgressBarProps {
-  currentQuestion: number
-  totalQuestions: number
+  currentQuestion: number;
+  totalQuestions: number;
+  answeredQuestions: Record<number, "correct" | "incorrect" | "neutral">;
 }
 
-export default function ProgressBar({ currentQuestion, totalQuestions }: ProgressBarProps) {
-  // Crear un array de colores para la barra de progreso
-  const colors = [
-    "bg-green-500",
-    "bg-green-400",
-    "bg-green-300",
-    "bg-red-400",
-    "bg-red-500",
-    "bg-blue-500",
-    "bg-blue-400",
-    "bg-red-400",
-    "bg-red-500",
-    "bg-green-500",
-    "bg-green-400",
-    "bg-green-300",
-  ]
-
-  // Crear segmentos para la barra de progreso
-  const segments = Array.from({ length: totalQuestions }, (_, i) => {
-    const colorIndex = i % colors.length
-    return {
-      completed: i <= currentQuestion,
-      color: colors[colorIndex],
-    }
-  })
-
+export default function ProgressBar({
+  currentQuestion,
+  totalQuestions,
+  answeredQuestions,
+}: ProgressBarProps) {
   return (
     <div className="flex h-2 w-full rounded-full overflow-hidden">
-      {segments.map((segment, index) => (
-        <div key={index} className={`${segment.color} ${segment.completed ? "opacity-100" : "opacity-30"} flex-1`} />
-      ))}
-    </div>
-  )
-}
+      {Array.from({ length: totalQuestions }, (_, i) => {
+        let colorClass = "bg-gray-300";
 
+        if (i === currentQuestion) {
+          colorClass = "bg-gray-500";
+        } else if (answeredQuestions[i] === "correct") {
+          colorClass = "bg-green-500";
+        } else if (answeredQuestions[i] === "incorrect") {
+          colorClass = "bg-red-500";
+        }
+
+        return <div key={i} className={`${colorClass} flex-1`} />;
+      })}
+    </div>
+  );
+}

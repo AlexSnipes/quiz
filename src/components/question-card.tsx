@@ -7,26 +7,17 @@ interface QuestionCardProps {
   question: Question;
   selectedAnswers: string[];
   onAnswerSelect: (answerId: string) => void;
-  handleNext: () => void;
+  getAnswerStatus: (answerId: string) => "neutral" | "correct" | "incorrect";
+  isAnswerSelected: (answerId: string) => boolean;
 }
 
 export default function QuestionCard({
   question,
   selectedAnswers,
   onAnswerSelect,
-  handleNext,
+  getAnswerStatus,
+  isAnswerSelected,
 }: QuestionCardProps) {
-  const isAnswerSelected = (answerId: string) => {
-    return selectedAnswers.includes(answerId);
-  };
-
-  const getAnswerStatus = (answerId: string) => {
-    if (!isAnswerSelected(answerId)) return "neutral";
-
-    const isCorrect = question.correctAnswers.includes(answerId);
-    return isCorrect ? "correct" : "incorrect";
-  };
-
   return (
     <div className="bg-white rounded-lg shadow-lg p-6 mb-4">
       <h2 className="text-center text-lg font-medium mb-6">{question.text}</h2>
