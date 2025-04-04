@@ -68,7 +68,7 @@ export default function QuestionCard({
                 ${status === "incorrect" ? "text-red-600" : ""}`}
 
               >*/}
-                <span>{answer.text}</span>
+                <span className="sm:text-base text-sm">{answer.text}</span>
                 {/*
                                 *
                               {status === "correct" && (

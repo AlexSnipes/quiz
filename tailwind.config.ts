@@ -15,6 +15,7 @@ const config: Config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        "primary-50": "rgba(74, 160, 196, 0.1)",
         "primary-100": "rgba(214, 228, 245, 0.9)",
         "primary-200": "rgba(214, 228, 245)",
         "primary-300": "rgb(164, 201, 223)",

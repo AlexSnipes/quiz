@@ -139,7 +139,7 @@ export default function CategoriesPage() {
             <button
               key={category.id}
               onClick={() => toggleCategory(category.id)}
-              className={`bg-white rounded-xl p-4 shadow-md flex flex-col items-center justify-center aspect-square transition-all ${
+              className={`bg-white hover:bg-primary-50 rounded-xl p-4 shadow-md flex flex-col items-center justify-center aspect-square transition-all ${
                 selectedCategories == category.id ? "ring-2 ring-blue-500" : ""
               }`}
             >
