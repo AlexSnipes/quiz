@@ -5,6 +5,10 @@ import QuestionCard from "./question-card";
 import ProgressBar from "./progress-bar";
 import Timer from "./timer";
 import { mockQuestions } from "@/lib/data";
+import Link from "next/link";
+import { ROUTES } from "@/ROUTES";
+import { useAtom } from "jotai/index";
+import { selectedCategoryAtom } from "@/lib/atom";
 
 export default function QuizApp() {
   const defaultTime = 30;
@@ -17,9 +21,14 @@ export default function QuizApp() {
   const [answeredQuestions, setAnsweredQuestions] = useState<
     Record<number, "correct" | "incorrect" | "neutral">
   >({});
+  const [selectedCategory, setSelectedCategory] = useAtom(selectedCategoryAtom);
 
-  const currentQuestion = mockQuestions[currentQuestionIndex];
-  const totalQuestions = mockQuestions.length;
+  const filteredQuestions = mockQuestions.filter(
+    (q) => q.category === selectedCategory,
+  );
+
+  const currentQuestion = filteredQuestions[currentQuestionIndex];
+  const totalQuestions = filteredQuestions.length;
 
   useEffect(() => {
     if (timeLeft === 0) {
@@ -96,6 +105,10 @@ export default function QuizApp() {
     }
   };
 
+  const isAnswerSelected = (answerId: string) => {
+    return (selectedAnswers[currentQuestionIndex] || []).includes(answerId);
+  };
+
   if (isFinished) {
     return (
       <div className="w-full max-w-md mx-auto p-4">
@@ -110,7 +123,7 @@ export default function QuizApp() {
               setIsFinished(false);
               setTimeLeft(defaultTime);
             }}
-            className="bg-blue-600 text-white py-3 px-6 rounded-lg w-full mb-4"
+            className="bg-primary-500 text-white py-3 px-6 rounded-lg w-full mb-4"
           >
             Reiniciar
           </button>
@@ -118,16 +131,13 @@ export default function QuizApp() {
       </div>
     );
   }
-  const isAnswerSelected = (answerId: string) => {
-    return (selectedAnswers[currentQuestionIndex] || []).includes(answerId);
-  };
 
   return (
-    <div className="w-full max-w-md mx-auto p-4">
-      <div className="bg-blue-600 rounded-t-3xl p-6 text-white">
+    <div className="w-full sm:max-w-4xl max-w mx-auto p-4">
+      <div className="bg-primary-500 rounded-t-3xl p-6 text-white">
         <div className="flex justify-between items-center mb-2">
           <h1 className="text-2xl font-bold">
-            Pregunta {currentQuestionIndex + 1}
+            Pregunta {currentQuestionIndex + 1} de {totalQuestions}
           </h1>
           <Timer timeLeft={timeLeft} setTimeLeft={setTimeLeft} />
         </div>
@@ -142,21 +152,27 @@ export default function QuizApp() {
         question={currentQuestion}
         selectedAnswers={selectedAnswers[currentQuestionIndex] || []}
         onAnswerSelect={handleAnswerSelect}
-        getAnswerStatus={getAnswerStatus} // ✅ Aquí lo pasamos bien
+        getAnswerStatus={getAnswerStatus}
         isAnswerSelected={isAnswerSelected}
       />
 
       <button
         onClick={handleNext}
-        className="bg-blue-600 text-white py-3 px-6 rounded-lg w-full mb-4"
+        className="bg-primary-500 hover:bg-primary-400 text-white py-3 px-6 rounded-lg w-full mb-4"
       >
         Siguiente
       </button>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center gap-2">
+        <Link
+          href={ROUTES.home}
+          className="bg-gray-200 hover:bg-gray-300 text-gray-700 py-2 px-8 rounded-lg w-full text-center"
+        >
+          Volver
+        </Link>
         <button
           onClick={handleExit}
-          className="bg-gray-200 text-gray-700 py-2 px-8 rounded-lg"
+          className="bg-gray-200 hover:bg-gray-300 text-gray-700 py-2 px-8 rounded-lg w-full"
         >
           Salir
         </button>

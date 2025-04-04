@@ -15,7 +15,7 @@ export const mockReversoresQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Reversores",
+    category: "thrust-reversal",
   },
   {
     id: "q2",
@@ -28,7 +28,7 @@ export const mockReversoresQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Reversores",
+    category: "thrust-reversal",
   },
   {
     id: "q3",
@@ -41,7 +41,7 @@ export const mockReversoresQuestions: Question[] = [
     ],
     correctAnswers: ["a3"],
     multipleCorrect: false,
-    category: "Reversores",
+    category: "thrust-reversal",
   },
   {
     id: "q4",
@@ -54,7 +54,7 @@ export const mockReversoresQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Reversores",
+    category: "thrust-reversal",
   },
   {
     id: "q5",
@@ -70,7 +70,7 @@ export const mockReversoresQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Reversores",
+    category: "thrust-reversal",
   },
   {
     id: "q6",
@@ -89,7 +89,7 @@ export const mockReversoresQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Reversores",
+    category: "thrust-reversal",
   },
   {
     id: "q7",
@@ -102,7 +102,7 @@ export const mockReversoresQuestions: Question[] = [
     ],
     correctAnswers: ["a3"],
     multipleCorrect: false,
-    category: "Reversores",
+    category: "thrust-reversal",
   },
   {
     id: "q8",
@@ -115,7 +115,7 @@ export const mockReversoresQuestions: Question[] = [
     ],
     correctAnswers: ["a3"],
     multipleCorrect: false,
-    category: "Reversores",
+    category: "thrust-reversal",
   },
   {
     id: "q9",
@@ -131,7 +131,7 @@ export const mockReversoresQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Reversores",
+    category: "thrust-reversal",
   },
   {
     id: "q10",
@@ -144,7 +144,7 @@ export const mockReversoresQuestions: Question[] = [
     ],
     correctAnswers: ["a3"],
     multipleCorrect: false,
-    category: "Reversores",
+    category: "thrust-reversal",
   },
   {
     id: "q11",
@@ -163,7 +163,7 @@ export const mockReversoresQuestions: Question[] = [
     ],
     correctAnswers: ["a1", "a2", "a4"],
     multipleCorrect: true,
-    category: "Reversores",
+    category: "thrust-reversal",
   },
   {
     id: "q12",
@@ -176,7 +176,7 @@ export const mockReversoresQuestions: Question[] = [
     ],
     correctAnswers: ["a1", "a2", "a4"],
     multipleCorrect: true,
-    category: "Reversores",
+    category: "thrust-reversal",
   },
   {
     id: "q13",
@@ -195,7 +195,7 @@ export const mockReversoresQuestions: Question[] = [
     ],
     correctAnswers: ["a1", "a2", "a4"],
     multipleCorrect: true,
-    category: "Reversores",
+    category: "thrust-reversal",
   },
   {
     id: "q14",
@@ -214,7 +214,7 @@ export const mockReversoresQuestions: Question[] = [
     ],
     correctAnswers: ["a1", "a3", "a4"],
     multipleCorrect: true,
-    category: "Reversores",
+    category: "thrust-reversal",
   },
   {
     id: "q15",
@@ -236,6 +236,6 @@ export const mockReversoresQuestions: Question[] = [
     ],
     correctAnswers: ["a1", "a2", "a3", "a4"],
     multipleCorrect: true,
-    category: "Reversores",
+    category: "thrust-reversal",
   },
 ];

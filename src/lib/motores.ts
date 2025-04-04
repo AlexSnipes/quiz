@@ -18,7 +18,7 @@ export const mockMotoresQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Motor Diesel",
+    category: "engines",
   },
   {
     id: "q2",
@@ -34,7 +34,7 @@ export const mockMotoresQuestions: Question[] = [
     ],
     correctAnswers: ["a3"],
     multipleCorrect: false,
-    category: "Motor Diesel",
+    category: "engines",
   },
   {
     id: "q3",
@@ -47,7 +47,7 @@ export const mockMotoresQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Motor Diesel",
+    category: "engines",
   },
   {
     id: "q4",
@@ -60,7 +60,7 @@ export const mockMotoresQuestions: Question[] = [
     ],
     correctAnswers: ["a2"],
     multipleCorrect: false,
-    category: "Motor Diesel",
+    category: "engines",
   },
   {
     id: "q5",
@@ -73,7 +73,7 @@ export const mockMotoresQuestions: Question[] = [
     ],
     correctAnswers: ["a2"],
     multipleCorrect: false,
-    category: "Motor Diesel",
+    category: "engines",
   },
   {
     id: "q6",
@@ -89,7 +89,7 @@ export const mockMotoresQuestions: Question[] = [
     ],
     correctAnswers: ["a2"],
     multipleCorrect: false,
-    category: "Motor Diesel",
+    category: "engines",
   },
   {
     id: "q7",
@@ -108,7 +108,7 @@ export const mockMotoresQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Motor Diesel",
+    category: "engines",
   },
   {
     id: "q8",
@@ -121,7 +121,7 @@ export const mockMotoresQuestions: Question[] = [
     ],
     correctAnswers: ["a3"],
     multipleCorrect: false,
-    category: "Motor Diesel",
+    category: "engines",
   },
   {
     id: "q9",
@@ -143,7 +143,7 @@ export const mockMotoresQuestions: Question[] = [
     ],
     correctAnswers: ["a1", "a2", "a3"],
     multipleCorrect: true,
-    category: "Motor Diesel",
+    category: "engines",
   },
   {
     id: "q10",
@@ -159,6 +159,6 @@ export const mockMotoresQuestions: Question[] = [
     ],
     correctAnswers: ["a2"],
     multipleCorrect: false,
-    category: "Motor Diesel",
+    category: "engines",
   },
 ];

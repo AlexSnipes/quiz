@@ -1,4 +1,5 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
+
 const config: Config = {
   darkMode: ["class"],
   content: [
@@ -14,10 +15,13 @@ const config: Config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
+        "primary-100": "rgba(214, 228, 245, 0.9)",
+        "primary-200": "rgba(214, 228, 245)",
+        "primary-300": "rgb(164, 201, 223)",
+        "primary-400": "rgb(123, 183, 209)",
+        "primary-500": "rgb(74, 160, 196)",
+        "primary-600": "rgba(29, 58, 109,0.7)",
+        "primary-700": "rgba(29, 58, 109)",
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
@@ -92,6 +96,5 @@ const config: Config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
-export default config
-
+};
+export default config;

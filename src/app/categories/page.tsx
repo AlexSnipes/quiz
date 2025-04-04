@@ -27,7 +27,6 @@ export default function CategoriesPage() {
     {
       id: "combustion-chamber",
       name: "Cámaras de Combustión",
-      status: "active",
       icon: (
         <div className="bg-gradient-to-br from-pink-300 to-red-400 p-3 rounded-xl">
           <CombustionChamberIcon />
@@ -37,7 +36,6 @@ export default function CategoriesPage() {
     {
       id: "engines",
       name: "Motores Alternativos",
-      status: "active",
       icon: (
         <div className="bg-gradient-to-br from-blue-300 to-blue-500 p-3 rounded-xl">
           <EnginesIcon />
@@ -47,7 +45,6 @@ export default function CategoriesPage() {
     {
       id: "jet-engines",
       name: "Motores a Reacción",
-      status: "disabled",
       icon: (
         <div className="bg-gradient-to-br from-purple-300 to-purple-500 p-3 rounded-xl">
           <JetEnginesIcon />
@@ -57,7 +54,6 @@ export default function CategoriesPage() {
     {
       id: "thrust-reversal",
       name: "Reversores de Empuje",
-      status: "active",
       icon: (
         <div className="bg-gradient-to-br from-green-300 to-green-500 p-3 rounded-xl">
           <ThrustReversalIcon />
@@ -65,9 +61,8 @@ export default function CategoriesPage() {
       ),
     },
     {
-      id: "vn-diagram",
+      id: "v-n-diagram",
       name: "Diagrama V-n",
-      status: "active",
       icon: (
         <div className="bg-gradient-to-br from-red-300 to-red-500 p-3 rounded-xl">
           <VNDiagramIcon />
@@ -76,8 +71,7 @@ export default function CategoriesPage() {
     },
     {
       id: "rocket-engines",
-      name: "Motores Cohete",
-      status: "disabled",
+      name: "Motores cohete",
       icon: (
         <div className="bg-gradient-to-br from-purple-300 to-pink-400 p-3 rounded-xl">
           <RocketEnginesIcon />
@@ -87,7 +81,6 @@ export default function CategoriesPage() {
     {
       id: "solar-system",
       name: "Sistema Solar",
-      status: "disabled",
       icon: (
         <div className="bg-gradient-to-br from-yellow-300 to-orange-500 p-3 rounded-xl">
           <SolarSystemIcon />
@@ -97,7 +90,6 @@ export default function CategoriesPage() {
     {
       id: "sonic",
       name: "Flujo Sónico",
-      status: "disabled",
       icon: (
         <div className="bg-gradient-to-br from-blue-300 to-blue-500 p-3 rounded-xl">
           <SonicFlowIcon />
@@ -107,7 +99,6 @@ export default function CategoriesPage() {
     {
       id: "propellers",
       name: "Hélices",
-      status: "disabled",
       icon: (
         <div className="bg-gradient-to-br from-purple-300 to-purple-500 p-3 rounded-xl">
           <PropellersIcon />
@@ -116,26 +107,25 @@ export default function CategoriesPage() {
     },
   ];
 
-  const filteredCategories = categories.filter(
-    (category) => category.status === "active",
-  );
-
   const toggleCategory = (categoryId: string) => {
     setSelectedCategory(categoryId);
-    router.push(ROUTES.quiz);
+    router.push("/quiz");
   };
 
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <div className="bg-primary-500 text-white p-4  items-center">
-        <h1 className="text-xl font-bold text-center">Seleccionar Categoría</h1>
+      <div className="bg-primary-500 text-white p-4 flex items-center">
+        <a href={ROUTES.home} className="mr-4">
+          <ChevronLeft size={24} />
+        </a>
+        <h1 className="text-xl font-bold">Seleccionar categoría</h1>
       </div>
 
       {/* Categories Grid */}
       <div className="p-4">
         <div className="grid sm:grid-cols-6 grid-cols-2 gap-4">
-          {filteredCategories.map((category) => (
+          {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => toggleCategory(category.id)}
@@ -153,6 +143,19 @@ export default function CategoriesPage() {
           ))}
         </div>
       </div>
+
+      {/* Start Button
+      <div className="fixed bottom-2 left-0 right-0 px-4">
+        <button
+          onClick={handleStartQuiz}
+          disabled={selectedCategories === null}
+          className={`w-full py-4 rounded-full text-white font-bold text-lg ${
+            selectedCategories != null ? "bg-blue-600" : "bg-gray-400"
+          }`}
+        >
+          Start Quiz
+        </button>
+      </div>*/}
     </div>
   );
 }
