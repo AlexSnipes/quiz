@@ -32,7 +32,9 @@ export default function QuestionCard({
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6 mb-4 space-y-3">
-      <h2 className="text-center text-lg font-medium mb-6">{question.text}</h2>
+      <h2 className="text-center sm:text-lg text-sm font-medium mb-6">
+        {question.text}
+      </h2>
       <div className="sm:flex">
         <div>
           {question.image && (
@@ -52,7 +54,7 @@ export default function QuestionCard({
               <button
                 key={answer.id}
                 onClick={() => onAnswerSelect(answer.id)}
-                className={`w-full text-left p-4 rounded-lg flex justify-between items-center transition-colors
+                className={`hover:bg-primary-200 w-full text-left p-4 rounded-lg flex justify-between items-center transition-colors
                 ${isAnswerSelected(answer.id) ? "bg-primary-300 " : "bg-gray-100"}
               `}
               >

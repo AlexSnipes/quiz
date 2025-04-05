@@ -2,6 +2,8 @@ import { mockMotoresQuestions } from "@/lib/motores";
 import { mockReversoresQuestions } from "@/lib/reversores";
 import { mockCombustionChamberQuestions } from "@/lib/combustion-chambers";
 import { mockDiagramVnQuestions } from "@/lib/vn-diagram";
+import { mockOttoCycleQuestions } from "@/lib/otto";
+import { mockTurbochargerQuestions } from "@/lib/turbocharger";
 
 export interface Answer {
   id: string;
@@ -24,6 +26,8 @@ export const mockQuestions: Question[] = [
   ...mockMotoresQuestions,
   ...mockCombustionChamberQuestions,
   ...mockDiagramVnQuestions,
+  ...mockOttoCycleQuestions,
+  ...mockTurbochargerQuestions,
 ];
 
 export async function loadQuestionsFromPDF(
