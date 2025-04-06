@@ -122,24 +122,45 @@ export default function QuizApp() {
     return (selectedAnswers[currentQuestionIndex] || []).includes(answerId);
   };
 
+  const answeredQuestionCorrectly = Object.values(answeredQuestions).filter(
+    (status) => status === "correct",
+  ).length;
+
   if (isFinished) {
     return (
       <div className="w-full max-w-md mx-auto p-4">
         <div className="bg-white rounded-lg shadow-lg p-6 text-center">
           <h2 className="text-2xl font-bold mb-4">¡Quiz completado!</h2>
-          <p className="mb-4">Gracias por completar el quiz.</p>
-          <button
-            onClick={() => {
-              setCurrentQuestionIndex(0);
-              setSelectedAnswers({});
-              setAnsweredQuestions({});
-              setIsFinished(false);
-              setTimeLeft(defaultTime);
-            }}
-            className="bg-primary-500 text-white py-3 px-6 rounded-lg w-full mb-4"
-          >
-            Reiniciar
-          </button>
+
+          <p className="mb-4">
+            Preguntas contestadas correctamente {answeredQuestionCorrectly} de{" "}
+            {totalQuestions}
+          </p>
+          <ProgressBar
+            currentQuestion={currentQuestionIndex + 1}
+            totalQuestions={totalQuestions}
+            answeredQuestions={answeredQuestions}
+          />
+          <div className="flex  mb-4 mt-4 gap-2">
+            <button
+              onClick={() => {
+                setCurrentQuestionIndex(0);
+                setSelectedAnswers({});
+                setAnsweredQuestions({});
+                setIsFinished(false);
+                setTimeLeft(defaultTime);
+              }}
+              className="bg-primary-500 hover:bg-primary-400 text-white py-3 px-6 rounded-lg w-full"
+            >
+              Reiniciar
+            </button>
+            <Link
+              href={ROUTES.home}
+              className="hover:text-white bg-white hover:bg-primary-300 text-primary-500 border border-primary-500 py-3 px-6 rounded-lg w-full"
+            >
+              Volver
+            </Link>
+          </div>
         </div>
       </div>
     );

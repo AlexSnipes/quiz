@@ -1,0 +1,321 @@
+import { Question } from "@/lib/data";
+
+export const mockEquilibriumQuestions: Question[] = [
+  {
+    id: "q1",
+    text: "En la ecuación n = L/W, ¿qué representa L?",
+    answers: [
+      { id: "a1", text: "La fuerza de sustentación" },
+      { id: "a2", text: "La fuerza de inercia" },
+      { id: "a3", text: "La fuerza de empuje" },
+      { id: "a4", text: "La fuerza de fricción" },
+    ],
+    correctAnswers: ["a1"],
+    multipleCorrect: false,
+    category: "load-factor-equilibrium",
+  },
+  {
+    id: "q2",
+    text: "En la ecuación n = L/W, ¿qué representa W?",
+    answers: [
+      { id: "a1", text: "El peso propio de la aeronave" },
+      { id: "a2", text: "La carga aerodinámica" },
+      { id: "a3", text: "La resistencia del aire" },
+      { id: "a4", text: "La potencia del motor" },
+    ],
+    correctAnswers: ["a1"],
+    multipleCorrect: false,
+    category: "load-factor-equilibrium",
+  },
+  {
+    id: "q3",
+    text: "Si la fuerza de sustentación es igual al peso, ¿cuál es el valor de n?",
+    answers: [
+      { id: "a1", text: "n = 0" },
+      { id: "a2", text: "n = 1" },
+      { id: "a3", text: "n = L + W" },
+      { id: "a4", text: "n > 1" },
+    ],
+    correctAnswers: ["a2"],
+    multipleCorrect: false,
+    category: "load-factor-equilibrium",
+  },
+  {
+    id: "q4",
+    text: "¿Qué implica que n sea igual a 1 en términos de equilibrio?",
+    answers: [
+      {
+        id: "a1",
+        text: "El avión se encuentra en equilibrio, sin aceleración neta",
+      },
+      { id: "a2", text: "El avión está acelerando" },
+      { id: "a3", text: "La sustentación es mayor que el peso" },
+      { id: "a4", text: "El avión está en caída libre" },
+    ],
+    correctAnswers: ["a1"],
+    multipleCorrect: false,
+    category: "load-factor-equilibrium",
+  },
+  {
+    id: "q5",
+    text: "Según el texto, ¿qué ley de Newton se relaciona con la condición de equilibrio?",
+    answers: [
+      { id: "a1", text: "La primera ley de Newton (inercia)" },
+      {
+        id: "a2",
+        text: "La segunda ley de Newton (fuerza = masa · aceleración)",
+      },
+      { id: "a3", text: "La tercera ley de Newton (acción y reacción)" },
+      { id: "a4", text: "Ninguna de las anteriores" },
+    ],
+    correctAnswers: ["a1"],
+    multipleCorrect: false,
+    category: "load-factor-equilibrium",
+  },
+  {
+    id: "q6",
+    text: "¿Qué sucede cuando una fuerza externa altera la condición de equilibrio de la aeronave?",
+    answers: [
+      { id: "a1", text: "El avión continúa en equilibrio sin cambios" },
+      {
+        id: "a2",
+        text: "El avión experimenta una aceleración al cambiar su trayectoria",
+      },
+      { id: "a3", text: "La sustentación disminuye hasta ser nula" },
+      { id: "a4", text: "El peso del avión aumenta" },
+    ],
+    correctAnswers: ["a2"],
+    multipleCorrect: false,
+    category: "load-factor-equilibrium",
+  },
+  {
+    id: "q7",
+    text: "¿Qué acción del piloto se menciona que modifica la actitud del avión?",
+    answers: [
+      {
+        id: "a1",
+        text: "Tirar el bastón hacia atrás y levantar el timón de profundidad",
+      },
+      { id: "a2", text: "Aumentar la potencia del motor" },
+      { id: "a3", text: "Reducir la velocidad de vuelo" },
+      { id: "a4", text: "Activar el tren de aterrizaje" },
+    ],
+    correctAnswers: ["a1"],
+    multipleCorrect: false,
+    category: "load-factor-equilibrium",
+  },
+  {
+    id: "q8",
+    text: "¿Cómo afecta el incremento del ángulo de ataque a la sustentación del ala?",
+    answers: [
+      {
+        id: "a1",
+        text: "Incrementa la sustentación, causando un cambio en la trayectoria",
+      },
+      {
+        id: "a2",
+        text: "Reduce la sustentación, provocando la caída del avión",
+      },
+      { id: "a3", text: "No tiene efecto en la sustentación" },
+      {
+        id: "a4",
+        text: "Aumenta la resistencia sin modificar la sustentación",
+      },
+    ],
+    correctAnswers: ["a1"],
+    multipleCorrect: false,
+    category: "load-factor-equilibrium",
+  },
+  {
+    id: "q9",
+    text: "¿Qué resultado se produce cuando el avión cambia de trayectoria debido a una fuerza externa?",
+    answers: [
+      { id: "a1", text: "Se produce una aceleración hacia adentro" },
+      { id: "a2", text: "El avión se estabiliza instantáneamente" },
+      { id: "a3", text: "La velocidad del avión se duplica" },
+      { id: "a4", text: "La sustentación disminuye a cero" },
+    ],
+    correctAnswers: ["a1"],
+    multipleCorrect: false,
+    category: "load-factor-equilibrium",
+  },
+  {
+    id: "q10",
+    text: "En el ejemplo del colectivo, ¿qué concepto se ilustra?",
+    answers: [
+      {
+        id: "a1",
+        text: "La inercia, que hace que los cuerpos tiendan a mantener su estado de equilibrio",
+      },
+      { id: "a2", text: "La aceleración del vehículo" },
+      { id: "a3", text: "El aumento del peso en movimiento" },
+      { id: "a4", text: "La disminución de la fuerza de fricción" },
+    ],
+    correctAnswers: ["a1"],
+    multipleCorrect: false,
+    category: "load-factor-equilibrium",
+  },
+  {
+    id: "q11",
+    text: "¿Qué efecto tiene la fuerza externa aplicada sobre el avión?",
+    answers: [
+      { id: "a1", text: "Produce una aceleración que desvía la trayectoria" },
+      { id: "a2", text: "Elimina la inercia del avión" },
+      { id: "a3", text: "Incrementa el peso del avión" },
+      { id: "a4", text: "Reduce la sustentación al instante" },
+    ],
+    correctAnswers: ["a1"],
+    multipleCorrect: false,
+    category: "load-factor-equilibrium",
+  },
+  {
+    id: "q12",
+    text: "Según las leyes de Newton, ¿qué ocurre ante toda acción?",
+    answers: [
+      {
+        id: "a1",
+        text: "Existe una reacción de igual magnitud y en sentido opuesto",
+      },
+      { id: "a2", text: "La acción se amplifica en la reacción" },
+      { id: "a3", text: "No se produce ninguna reacción" },
+      { id: "a4", text: "La reacción es siempre menor que la acción" },
+    ],
+    correctAnswers: ["a1"],
+    multipleCorrect: false,
+    category: "load-factor-equilibrium",
+  },
+  {
+    id: "q13",
+    text: "¿Qué relación se mantiene entre la sustentación y el peso en condiciones de equilibrio?",
+    answers: [
+      { id: "a1", text: "La sustentación es mayor que el peso" },
+      { id: "a2", text: "La sustentación es menor que el peso" },
+      { id: "a3", text: "La sustentación es igual al peso" },
+      { id: "a4", text: "No existe relación entre ambos" },
+    ],
+    correctAnswers: ["a3"],
+    multipleCorrect: false,
+    category: "load-factor-equilibrium",
+  },
+  {
+    id: "q14",
+    text: "Seleccione las afirmaciones correctas sobre la condición de equilibrio del avión:",
+    answers: [
+      {
+        id: "a1",
+        text: "El avión puede estar en movimiento y aun así estar en equilibrio",
+      },
+      { id: "a2", text: "La sustentación iguala el peso (L = W)" },
+      {
+        id: "a3",
+        text: "Sin fuerzas externas, el estado de movimiento se mantiene constante",
+      },
+      {
+        id: "a4",
+        text: "El avión permanece en equilibrio solo cuando está en reposo",
+      },
+    ],
+    correctAnswers: ["a1", "a2", "a3"],
+    multipleCorrect: true,
+    category: "load-factor-equilibrium",
+  },
+  {
+    id: "q15",
+    text: "¿Qué fuerza externa se menciona que altera el equilibrio del avión?",
+    answers: [
+      {
+        id: "a1",
+        text: "La acción del piloto al cambiar la actitud del empenaje horizontal",
+      },
+      { id: "a2", text: "El viento en contra" },
+      { id: "a3", text: "La resistencia del aire" },
+      { id: "a4", text: "El empuje de los motores" },
+    ],
+    correctAnswers: ["a1"],
+    multipleCorrect: false,
+    category: "load-factor-equilibrium",
+  },
+  {
+    id: "q16",
+    text: "¿Qué sucede cuando se altera la trayectoria de un objeto en movimiento, según el texto?",
+    answers: [
+      { id: "a1", text: "Se produce una aceleración" },
+      { id: "a2", text: "El objeto se detiene" },
+      { id: "a3", text: "La inercia desaparece" },
+      { id: "a4", text: "El objeto se mueve en línea recta" },
+    ],
+    correctAnswers: ["a1"],
+    multipleCorrect: false,
+    category: "load-factor-equilibrium",
+  },
+  {
+    id: "q17",
+    text: "¿Qué implica que L/W sea igual a 1 en términos de la condición del avión?",
+    answers: [
+      { id: "a1", text: "El avión está en equilibrio, sin aceleración neta" },
+      { id: "a2", text: "El avión está acelerando hacia arriba" },
+      { id: "a3", text: "El avión está en caída libre" },
+      { id: "a4", text: "La sustentación es insuficiente para el vuelo" },
+    ],
+    correctAnswers: ["a1"],
+    multipleCorrect: false,
+    category: "load-factor-equilibrium",
+  },
+  {
+    id: "q18",
+    text: "Seleccione las afirmaciones correctas sobre el efecto de una fuerza externa en el estado de equilibrio:",
+    answers: [
+      { id: "a1", text: "Una fuerza externa altera el ángulo de ataque" },
+      {
+        id: "a2",
+        text: "La inercia tiende a mantener el estado de equilibrio del avión",
+      },
+      { id: "a3", text: "El cambio de trayectoria genera una aceleración" },
+      {
+        id: "a4",
+        text: "El avión permanece en equilibrio sin importar la fuerza externa",
+      },
+    ],
+    correctAnswers: ["a1", "a2", "a3"],
+    multipleCorrect: true,
+    category: "load-factor-equilibrium",
+  },
+  {
+    id: "q19",
+    text: "¿Qué efecto tiene la fuerza de inercia en el contexto explicado en el texto?",
+    answers: [
+      {
+        id: "a1",
+        text: "Tiende a mantener la condición de equilibrio del avión",
+      },
+      { id: "a2", text: "Provoca una aceleración hacia el centro de la curva" },
+      { id: "a3", text: "Hace que el avión acelere sin control" },
+      { id: "a4", text: "Impide cualquier cambio en la trayectoria" },
+    ],
+    correctAnswers: ["a1"],
+    multipleCorrect: false,
+    category: "load-factor-equilibrium",
+  },
+  {
+    id: "q20",
+    text: "Seleccione las afirmaciones correctas sobre la influencia de las fuerzas externas y la reacción del avión, según las leyes de Newton:",
+    answers: [
+      { id: "a1", text: "Una fuerza externa cambia la trayectoria del avión" },
+      {
+        id: "a2",
+        text: "La aceleración resultante se debe a la desviación del equilibrio",
+      },
+      {
+        id: "a3",
+        text: "Siempre existe una reacción de igual magnitud y opuesta",
+      },
+      {
+        id: "a4",
+        text: "El avión permanece inalterable ante cualquier fuerza externa",
+      },
+    ],
+    correctAnswers: ["a1", "a2", "a3"],
+    multipleCorrect: true,
+    category: "load-factor-equilibrium",
+  },
+];

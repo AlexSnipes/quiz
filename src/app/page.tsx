@@ -114,6 +114,26 @@ export default function CategoriesPage() {
         </div>
       ),
     },
+    {
+      id: "load-factor-equilibrium",
+      name: "Equilibrio",
+      status: "active",
+      icon: (
+        <div className="bg-gradient-to-br from-purple-300 to-purple-500 p-3 rounded-xl">
+          <PropellersIcon />
+        </div>
+      ),
+    },
+    {
+      id: "load-factor",
+      name: "Factor de Carga",
+      status: "active",
+      icon: (
+        <div className="bg-gradient-to-br from-purple-300 to-purple-500 p-3 rounded-xl">
+          <PropellersIcon />
+        </div>
+      ),
+    },
   ];
 
   const filteredCategories = categories.filter(
