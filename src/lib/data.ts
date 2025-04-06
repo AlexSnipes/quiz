@@ -6,6 +6,9 @@ import { mockOttoCycleQuestions } from "@/lib/otto";
 import { mockTurbochargerQuestions } from "@/lib/turbocharger";
 import { mockEquilibriumQuestions } from "@/lib/equilibrium";
 import { mockLoadFactorQuestions } from "@/lib/load-factor";
+import { mockDiagramVn2Questions } from "@/lib/vn-diagram-2";
+import { mockDiagramVn3Questions } from "@/lib/vn-diagram-3";
+import { mockDiagramVn4Questions } from "@/lib/vn-diagram-4";
 
 export interface Answer {
   id: string;
@@ -32,6 +35,9 @@ export const mockQuestions: Question[] = [
   ...mockTurbochargerQuestions,
   ...mockEquilibriumQuestions,
   ...mockLoadFactorQuestions,
+  ...mockDiagramVn2Questions,
+  ...mockDiagramVn3Questions,
+  ...mockDiagramVn4Questions,
 ];
 
 export async function loadQuestionsFromPDF(

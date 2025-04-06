@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import QuestionCard from "./question-card";
 import ProgressBar from "./progress-bar";
 import Timer from "./timer";
-import { mockQuestions } from "@/lib/data";
+import { mockQuestions, Question } from "@/lib/data";
 import Link from "next/link";
 import { ROUTES } from "@/ROUTES";
 import { useAtom } from "jotai/index";
@@ -29,19 +29,24 @@ export default function QuizApp() {
   if (!selectedCategory) {
     return router.push(ROUTES.home);
   }
+  const filteredQuestions = mockQuestions.filter(
+    (q) => q.category === selectedCategory,
+  );
+  const randomQuestions = useMemo(() => {
+    const filteredQuestions = mockQuestions.filter(
+      (q) => q.category === selectedCategory,
+    );
+    return filteredQuestions.sort(() => Math.random() - 0.5).slice(0, 10);
+  }, [selectedCategory]);
+
+  const totalQuestions = randomQuestions.length;
+  const currentQuestion = randomQuestions[currentQuestionIndex];
 
   useEffect(() => {
     if (!selectedCategory) {
       router.push(ROUTES.home);
     }
   }, []);
-
-  const filteredQuestions = mockQuestions.filter(
-    (q) => q.category === selectedCategory,
-  );
-
-  const currentQuestion = filteredQuestions[currentQuestionIndex];
-  const totalQuestions = filteredQuestions.length;
 
   useEffect(() => {
     if (timeLeft === 0) {
