@@ -125,6 +125,16 @@ export default function CategoriesPage() {
       ),
     },
     {
+      id: "wind-tunnels",
+      name: "Tuneles de viento",
+      status: "active",
+      icon: (
+        <div className="bg-gradient-to-br from-purple-300 to-purple-500 p-3 rounded-xl">
+          <PropellersIcon />
+        </div>
+      ),
+    },
+    {
       id: "load-factor",
       name: "Factor de Carga",
       status: "active",

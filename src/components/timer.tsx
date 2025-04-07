@@ -10,7 +10,7 @@ interface TimerProps {
 export default function Timer({ timeLeft, setTimeLeft }: TimerProps) {
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft((prevTime) => {
+      setTimeLeft((prevTime: number) => {
         if (prevTime <= 1) {
           // clearInterval(timer)
           return 0;
@@ -44,7 +44,7 @@ export default function Timer({ timeLeft, setTimeLeft }: TimerProps) {
         />
       </svg>
       <span
-        className={`text-sm font-medium ${seconds <= 10 ? "text-red-500" : "text-green-300"}`}
+        className={`sm:text-base text-xs font-medium ${seconds <= 10 ? "text-red-500" : "text-green-300"}`}
       >
         {formattedTime}
       </span>

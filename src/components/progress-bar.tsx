@@ -10,7 +10,7 @@ export default function ProgressBar({
   answeredQuestions,
 }: ProgressBarProps) {
   return (
-    <div className="flex h-2 w-full rounded-full overflow-hidden">
+    <div className="flex h-4 w-full rounded-full overflow-hidden">
       {Array.from({ length: totalQuestions }, (_, i) => {
         let colorClass = "bg-gray-300";
 
@@ -22,7 +22,14 @@ export default function ProgressBar({
           colorClass = "bg-red-500";
         }
 
-        return <div key={i} className={`${colorClass} flex-1`} />;
+        return (
+          <div
+            key={i}
+            className={`${colorClass} flex-1 text-xs text-center text-white`}
+          >
+            {i + 1}
+          </div>
+        );
       })}
     </div>
   );

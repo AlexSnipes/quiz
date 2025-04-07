@@ -13,6 +13,8 @@ export const mockCombustionChamberQuestions: Question[] = [
     correctAnswers: ["a1"],
     multipleCorrect: false,
     category: "combustion-chamber",
+    explanation:
+      "El texto indica que la cámara de combustión consta de dos carcasas, una interior y una exterior, que están totalmente abiertas y comunicadas entre sí.",
   },
   {
     id: "q2",
@@ -29,6 +31,8 @@ export const mockCombustionChamberQuestions: Question[] = [
     correctAnswers: ["a3"],
     multipleCorrect: false,
     category: "combustion-chamber",
+    explanation:
+      "El aire primario, proveniente del compresor, contacta directamente con el inyector, encendiendo la mezcla como si fuera un mechero.",
   },
   {
     id: "q3",
@@ -45,6 +49,8 @@ export const mockCombustionChamberQuestions: Question[] = [
     correctAnswers: ["a2"],
     multipleCorrect: false,
     category: "combustion-chamber",
+    explanation:
+      "El aire secundario se encarga de completar la mezcla, mezclándose con el combustible que inicialmente no se quemó.",
   },
   {
     id: "q4",
@@ -58,6 +64,8 @@ export const mockCombustionChamberQuestions: Question[] = [
     correctAnswers: ["a2"],
     multipleCorrect: false,
     category: "combustion-chamber",
+    explanation:
+      "La tercera parte del aire se utiliza principalmente para refrigerar la cámara de combustión, ayudando a controlar las temperaturas elevadas.",
   },
   {
     id: "q5",
@@ -74,6 +82,8 @@ export const mockCombustionChamberQuestions: Question[] = [
     correctAnswers: ["a2"],
     multipleCorrect: false,
     category: "combustion-chamber",
+    explanation:
+      "Cada cámara individual produce puntos de alta temperatura en su centro, lo que puede conducir a fatiga térmica a lo largo del tiempo.",
   },
   {
     id: "q6",
@@ -90,6 +100,8 @@ export const mockCombustionChamberQuestions: Question[] = [
     correctAnswers: ["a2"],
     multipleCorrect: false,
     category: "combustion-chamber",
+    explanation:
+      "Las cámaras están conectadas mediante conductos que permiten mantener la llama encendida de forma continua en toda la unidad.",
   },
   {
     id: "q7",
@@ -103,6 +115,8 @@ export const mockCombustionChamberQuestions: Question[] = [
     correctAnswers: ["a4"],
     multipleCorrect: false,
     category: "combustion-chamber",
+    explanation:
+      "Una ventaja clave es la facilidad de mantenimiento, ya que se puede retirar y reparar o reemplazar una cámara de combustión individual si es necesario.",
   },
   {
     id: "q8",
@@ -125,6 +139,8 @@ export const mockCombustionChamberQuestions: Question[] = [
     correctAnswers: ["a1", "a3", "a4"],
     multipleCorrect: true,
     category: "combustion-chamber",
+    explanation:
+      "Cada flujo tiene una función: el aire primario enciende la mezcla, el aire secundario la completa y la tercera parte se usa para refrigerar la cámara.",
   },
   {
     id: "q9",
@@ -144,6 +160,8 @@ export const mockCombustionChamberQuestions: Question[] = [
     correctAnswers: ["a2"],
     multipleCorrect: false,
     category: "combustion-chamber",
+    explanation:
+      "La conexión mediante conductos entre las cámaras asegura que la llama se mantenga encendida continuamente.",
   },
   {
     id: "q10",
@@ -157,5 +175,7 @@ export const mockCombustionChamberQuestions: Question[] = [
     correctAnswers: ["a3"],
     multipleCorrect: false,
     category: "combustion-chamber",
+    explanation:
+      "Las variaciones de temperatura en la turbina influyen en sus álabes, lo que puede causar fatiga térmica con el tiempo.",
   },
 ];

@@ -9,6 +9,7 @@ import { mockLoadFactorQuestions } from "@/lib/load-factor";
 import { mockDiagramVn2Questions } from "@/lib/vn-diagram-2";
 import { mockDiagramVn3Questions } from "@/lib/vn-diagram-3";
 import { mockDiagramVn4Questions } from "@/lib/vn-diagram-4";
+import { mockWindTunnelsQuestions } from "@/lib/wind-tunnels";
 
 export interface Answer {
   id: string;
@@ -23,6 +24,7 @@ export interface Question {
   multipleCorrect: boolean;
   category: string;
   image?: string;
+  explanation?: string;
 }
 
 // Datos de ejemplo para la aplicación
@@ -38,6 +40,7 @@ export const mockQuestions: Question[] = [
   ...mockDiagramVn2Questions,
   ...mockDiagramVn3Questions,
   ...mockDiagramVn4Questions,
+  ...mockWindTunnelsQuestions,
 ];
 
 export async function loadQuestionsFromPDF(
