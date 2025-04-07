@@ -212,25 +212,27 @@ export default function QuizApp() {
 
         <button
           onClick={handleNext}
-          className="bg-primary-500 hover:bg-primary-400 text-white py-3 px-6 rounded-lg w-full mb-4 sm:text-base text-sm"
+          className="bg-primary-500 hover:bg-primary-400 text-white py-2 px-6 rounded-lg w-full mb-4 sm:text-sm text-xs"
         >
           Siguiente
         </button>
 
-        <div className="flex justify-center gap-2">
-          <Link
-            href={ROUTES.home}
-            className="bg-gray-200 hover:bg-gray-300 text-gray-700 py-2 px-8 rounded-lg w-full text-center sm:text-base text-sm"
-          >
-            Volver
-          </Link>
-          <button
-            onClick={handleExit}
-            className="bg-gray-200 hover:bg-gray-300 text-gray-700 py-2 px-8 rounded-lg w-full sm:text-base text-sm"
-          >
-            Salir
-          </button>
-        </div>
+        {/*
+                     <div className="flex justify-center gap-2">
+                    <Link
+                      href={ROUTES.home}
+                      className="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-8 rounded-lg w-full text-center sm:text-sm text-xs"
+                    >
+                      Volver
+                    </Link>
+                    <button
+                      onClick={handleExit}
+                      className="bg-gray-200 hover:bg-gray-300 text-gray-700 py-1 px-8 rounded-lg w-full sm:text-sm text-xs"
+                    >
+                      Salir
+                    </button>
+                  </div>
+                    * */}
       </div>
     </>
   );
