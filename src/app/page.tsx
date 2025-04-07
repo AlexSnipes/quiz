@@ -9,12 +9,15 @@ import {
   CombustionChamberIcon,
   EnginesIcon,
   JetEnginesIcon,
+  LoadFactorEquilibriumIcon,
+  LoadFactorIcon,
   PropellersIcon,
   RocketEnginesIcon,
   SolarSystemIcon,
   SonicFlowIcon,
   ThrustReversalIcon,
   VNDiagramIcon,
+  WindTunnelsIcon,
 } from "@/icons/icons";
 import { ROUTES } from "@/ROUTES";
 
@@ -119,8 +122,8 @@ export default function CategoriesPage() {
       name: "Equilibrio",
       status: "active",
       icon: (
-        <div className="bg-gradient-to-br from-purple-300 to-purple-500 p-3 rounded-xl">
-          <PropellersIcon />
+        <div className="bg-gradient-to-br from-yellow-300 to-orange-500  p-3 rounded-xl">
+          <LoadFactorEquilibriumIcon />
         </div>
       ),
     },
@@ -129,8 +132,8 @@ export default function CategoriesPage() {
       name: "Tuneles de viento",
       status: "active",
       icon: (
-        <div className="bg-gradient-to-br from-purple-300 to-purple-500 p-3 rounded-xl">
-          <PropellersIcon />
+        <div className="bg-gradient-to-br from-purple-300 to-pink-400 p-3 rounded-xl">
+          <WindTunnelsIcon />
         </div>
       ),
     },
@@ -140,7 +143,7 @@ export default function CategoriesPage() {
       status: "active",
       icon: (
         <div className="bg-gradient-to-br from-purple-300 to-purple-500 p-3 rounded-xl">
-          <PropellersIcon />
+          <LoadFactorIcon />
         </div>
       ),
     },

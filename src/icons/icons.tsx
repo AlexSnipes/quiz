@@ -1,152 +1,301 @@
-import { FC } from "react";
+import React from "react";
 
-interface IconProps {
-  className?: string;
-  strokeWidth?: number;
-  strokeColor?: string;
-  strokeLinecap?: string;
-  strokeLinejoin?: string;
+// Icon for Combustion Chambers
+export function CombustionChamberIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-8 h-8 text-white"
+    >
+      <path d="M12 2v2M8 4l1 2M16 4l-1 2" />
+      <path d="M16.5 7.5a4.5 4.5 0 0 1-9 0" />
+      <path d="M7.5 7.5C5 10 5 14 7.5 16.5h9c2.5-2.5 2.5-6.5 0-9h-9z" />
+      <path d="M12 9v8" />
+      <path d="M9 10v6" />
+      <path d="M15 10v6" />
+      <path d="M7.5 16.5l-1.5 3.5h12l-1.5-3.5" />
+      <path d="M5 22h14" />
+    </svg>
+  );
 }
 
-export const CombustionChamberIcon: FC<IconProps> = ({
-  className = "w-8 h-8",
-  strokeColor,
-  ...props
-}) => {
+// Icon for Reciprocating/Alternative Engines
+export function EnginesIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      fill="white"
-      className={`${className} `}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-8 h-8 text-white"
     >
-      <path d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 0 1 .75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 0 1 9.75 22.5a.75.75 0 0 1-.75-.75v-4.131A15.838 15.838 0 0 1 6.382 15H2.25a.75.75 0 0 1-.75-.75 6.75 6.75 0 0 1 7.815-6.666ZM15 6.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z" />
-      <path d="M5.26 17.242a.75.75 0 1 0-.897-1.203 5.243 5.243 0 0 0-2.05 5.022.75.75 0 0 0 .625.627 5.243 5.243 0 0 0 5.022-2.051.75.75 0 1 0-1.202-.897 3.744 3.744 0 0 1-3.008 1.51c0-1.23.592-2.323 1.51-3.008Z" />
+      <circle cx="12" cy="12" r="10" />
+      <path d="M14.5 4.5 12 12l-2.5-7.5" />
+      <path d="M19.5 12H12l7.5-2.5" />
+      <path d="M14.5 19.5 12 12l-2.5 7.5" />
+      <path d="M4.5 12H12L4.5 14.5" />
+      <circle cx="12" cy="12" r="2" />
     </svg>
   );
-};
-export const EnginesIcon: FC<IconProps> = ({ className = "w-8 h-8" }) => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="white"
-      className={className}
-    >
-      <path d="M21.721 12.752a9.711 9.711 0 0 0-.945-5.003 12.754 12.754 0 0 1-4.339 2.708 18.991 18.991 0 0 1-.214 4.772 17.165 17.165 0 0 0 5.498-2.477ZM14.634 15.55a17.324 17.324 0 0 0 .332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 0 0 .332 4.647 17.385 17.385 0 0 0 5.268 0ZM9.772 17.119a18.963 18.963 0 0 0 4.456 0A17.182 17.182 0 0 1 12 21.724a17.18 17.18 0 0 1-2.228-4.605ZM7.777 15.23a18.87 18.87 0 0 1-.214-4.774 12.753 12.753 0 0 1-4.34-2.708 9.711 9.711 0 0 0-.944 5.004 17.165 17.165 0 0 0 5.498 2.477ZM21.356 14.752a9.765 9.765 0 0 1-7.478 6.817 18.64 18.64 0 0 0 1.988-4.718 18.627 18.627 0 0 0 5.49-2.098ZM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 0 0 1.988 4.718 9.765 9.765 0 0 1-7.478-6.816ZM13.878 2.43a9.755 9.755 0 0 1 6.116 3.986 11.267 11.267 0 0 1-3.746 2.504 18.63 18.63 0 0 0-2.37-6.49ZM12 2.276a17.152 17.152 0 0 1 2.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0 1 12 2.276ZM10.122 2.43a18.629 18.629 0 0 0-2.37 6.49 11.266 11.266 0 0 1-3.746-2.504 9.754 9.754 0 0 1 6.116-3.985Z" />
-    </svg>
-  );
-};
+}
 
-export const JetEnginesIcon: FC<IconProps> = ({ className = "w-8 h-8" }) => {
+// Icon for Jet Engines
+export function JetEnginesIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      fill="white"
-      className={className}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-8 h-8 text-white"
     >
+      <path d="M8 10h8" />
+      <path d="M8 14h8" />
+      <path d="M8 7h3" />
+      <path d="M8 17h3" />
+      <path d="M4 12a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v0a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v0z" />
+      <path d="M6 12V6.5a1.5 1.5 0 0 1 3 0V12" />
+      <path d="M18 12v5.5a1.5 1.5 0 0 1-3 0V12" />
+      <path d="M10 12V9.5a1.5 1.5 0 0 1 3 0V12" />
+      <path d="M14 12v2.5a1.5 1.5 0 0 1-3 0V12" />
+    </svg>
+  );
+}
+
+// Icon for Thrust Reversers
+export function ThrustReversalIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-8 h-8 text-white"
+    >
+      <path d="M4 10h16v4H4z" />
+      <path d="M6 10V6l4 4" />
+      <path d="M6 14v4l4-4" />
+      <path d="M18 10V6l-4 4" />
+      <path d="M18 14v4l-4-4" />
+      <path d="M12 9v6" />
+    </svg>
+  );
+}
+
+// Icon for V-n Diagram
+export function VNDiagramIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-8 h-8 text-white"
+    >
+      <path d="M3 20h18" />
+      <path d="M3 20V4" />
+      <path d="M20 16l-6-12-4 8-4-4-3 8" />
+      <path d="M20 8h-4" />
+      <path d="M20 12h-2" />
+    </svg>
+  );
+}
+
+// Icon for Rocket Engines
+export function RocketEnginesIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-8 h-8 text-white"
+    >
+      <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+      <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+      <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+      <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+    </svg>
+  );
+}
+
+// Icon for Solar System
+export function SolarSystemIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-8 h-8 text-white"
+    >
+      <circle cx="12" cy="12" r="3" />
+      <circle cx="19" cy="5" r="1" />
+      <circle cx="5" cy="19" r="1" />
+      <circle cx="18" cy="12" r="1" />
+      <circle cx="12" cy="18" r="1" />
+      <circle cx="6" cy="12" r="1" />
+      <circle cx="12" cy="6" r="1" />
       <path
-        fillRule="evenodd"
-        d="M12 2.25c-5.385 0-9.75 4.365..."
-        clipRule="evenodd"
+        d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20"
+        strokeDasharray="40,11.5"
       />
     </svg>
   );
-};
+}
 
-export const ThrustReversalIcon: FC<IconProps> = ({
-  className = "w-8 h-8",
-}) => {
+// Icon for Sonic Flow
+export function SonicFlowIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      fill="white"
-      className={className}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-8 h-8 text-white"
     >
-      <path
-        fillRule="evenodd"
-        d="M12.963 2.286a.75.75 0 0 0-1.071-.136 9.742 9.742 0 0 0-3.539 6.176 7.547 7.547 0 0 1-1.705-1.715.75.75 0 0 0-1.152-.082A9 9 0 1 0 15.68 4.534a7.46 7.46 0 0 1-2.717-2.248ZM15.75 14.25a3.75 3.75 0 1 1-7.313-1.172c.628.465 1.35.81 2.133 1a5.99 5.99 0 0 1 1.925-3.546 3.75 3.75 0 0 1 3.255 3.718Z"
-        clipRule="evenodd"
-      />
+      <path d="M3 12h3" />
+      <path d="M8 12h3" />
+      <path d="M13 12h3" />
+      <path d="M18 12h3" />
+      <path d="M3 7h2" />
+      <path d="M3 17h2" />
+      <path d="M19 7h2" />
+      <path d="M19 17h2" />
+      <path d="M8 7c0 0 1.5-2 4-2s4 2 4 2" />
+      <path d="M8 17c0 0 1.5 2 4 2s4-2 4-2" />
     </svg>
   );
-};
+}
 
-export const VNDiagramIcon: FC<IconProps> = ({ className = "w-8 h-8" }) => {
+// Icon for Propellers
+export function PropellersIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      fill="white"
-      className={className}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-8 h-8 text-white"
     >
-      <path
-        fillRule="evenodd"
-        d="M1.5 5.625c0-1.036.84-1.875 1.875-1.875h17.25c1.035 0 1.875.84 1.875 1.875v12.75c0 1.035-.84 1.875-1.875 1.875H3.375A1.875 1.875 0 0 1 1.5 18.375V5.625Zm1.5 0v1.5c0 .207.168.375.375.375h1.5a.375.375 0 0 0 .375-.375v-1.5a.375.375 0 0 0-.375-.375h-1.5A.375.375 0 0 0 3 5.625Zm16.125-.375a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h1.5A.375.375 0 0 0 21 7.125v-1.5a.375.375 0 0 0-.375-.375h-1.5ZM21 9.375A.375.375 0 0 0 20.625 9h-1.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h1.5a.375.375 0 0 0 .375-.375v-1.5Zm0 3.75a.375.375 0 0 0-.375-.375h-1.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h1.5a.375.375 0 0 0 .375-.375v-1.5Zm0 3.75a.375.375 0 0 0-.375-.375h-1.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h1.5a.375.375 0 0 0 .375-.375v-1.5Zm-16.5-7.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h1.5a.375.375 0 0 0 .375-.375v-1.5a.375.375 0 0 0-.375-.375h-1.5Zm0 3.75a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h1.5a.375.375 0 0 0 .375-.375v-1.5a.375.375 0 0 0-.375-.375h-1.5Zm0 3.75a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h1.5a.375.375 0 0 0 .375-.375v-1.5a.375.375 0 0 0-.375-.375h-1.5Zm4.125-9a.75.75 0 0 0 0 1.5h9a.75.75 0 0 0 0-1.5h-9Z"
-        clipRule="evenodd"
-      />
+      <circle cx="12" cy="12" r="2" />
+      <path d="M12 2c1.6 0 3 1.1 3 2.5S13.6 7 12 7s-3-1.1-3-2.5S10.4 2 12 2" />
+      <path d="M12 22c-1.6 0-3-1.1-3-2.5s1.4-2.5 3-2.5 3 1.1 3 2.5-1.4 2.5-3 2.5" />
+      <path d="M19.7 4.3c.8 1.4.3 3-1 3.5s-2.9-.2-3.7-1.6-.3-3 1-3.5 2.9.2 3.7 1.6" />
+      <path d="M4.3 19.7c-.8-1.4-.3-3 1-3.5s2.9.2 3.7 1.6.3 3-1 3.5-2.9-.2-3.7-1.6" />
+      <path d="M19.7 19.7c-.8 1.4-2.2 1.9-3.5 1s-1.3-2.7-.5-4.1 2.2-1.9 3.5-1 1.3 2.7.5 4.1" />
+      <path d="M4.3 4.3c.8-1.4 2.2-1.9 3.5-1s1.3 2.7.5 4.1-2.2 1.9-3.5 1-1.3-2.7-.5-4.1" />
     </svg>
   );
-};
+}
 
-export const RocketEnginesIcon: FC<IconProps> = ({ className = "w-8 h-8" }) => {
+// Icon for Load Factor Equilibrium
+export function LoadFactorEquilibriumIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      fill="white"
-      className={className}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-8 h-8 text-white"
     >
-      <path
-        fillRule="evenodd"
-        d="M10.5 3.798v5.02a3 3 0 0 1-.879 2.121l-2.377 2.377a9.845 9.845 0 0 1 5.091 1.013 8.315 8.315 0 0 0 5.713.636l.285-.071-3.954-3.955a3 3 0 0 1-.879-2.121v-5.02a23.614 23.614 0 0 0-3 0Zm4.5.138a.75.75 0 0 0 .093-1.495A24.837 24.837 0 0 0 12 2.25a25.048 25.048 0 0 0-3.093.191A.75.75 0 0 0 9 3.936v4.882a1.5 1.5 0 0 1-.44 1.06l-6.293 6.294c-1.62 1.621-.903 4.475 1.471 4.88 2.686.46 5.447.698 8.262.698 2.816 0 5.576-.239 8.262-.697 2.373-.406 3.092-3.26 1.47-4.881L15.44 9.879A1.5 1.5 0 0 1 15 8.818V3.936Z"
-        clipRule="evenodd"
-      />
+      <path d="M12 2v20" />
+      <path d="M2 12h20" />
+      <path d="M12 2 8 6" />
+      <path d="M12 2l4 4" />
+      <path d="M12 22l-4-4" />
+      <path d="M12 22l4-4" />
+      <path d="M2 12l4-4" />
+      <path d="M2 12l4 4" />
+      <path d="M22 12l-4-4" />
+      <path d="M22 12l-4 4" />
     </svg>
   );
-};
+}
 
-export const SolarSystemIcon: FC<IconProps> = ({ className = "w-8 h-8" }) => {
+// Icon for Wind Tunnels
+export function WindTunnelsIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      fill="white"
-      className={className}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-8 h-8 text-white"
     >
-      <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
+      <path d="M5 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+      <path d="M19 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+      <path d="M5 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+      <path d="M19 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+      <path d="M5 8v8" />
+      <path d="M19 8v8" />
+      <path d="M8 6h8" />
+      <path d="M8 18h8" />
+      <path d="M9 10h6" />
+      <path d="M9 14h6" />
     </svg>
   );
-};
+}
 
-export const SonicFlowIcon: FC<IconProps> = ({ className = "w-8 h-8" }) => {
+// Icon for Load Factor
+export function LoadFactorIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      fill="white"
-      className={className}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-8 h-8 text-white"
     >
-      <path d="M3.478 2.404a.75.75 0 0 0-.926.941l2.432 7.905H13.5a.75.75 0 0 1 0 1.5H4.984l-2.432 7.905a.75.75 0 0 0 .926.94 60.519 60.519 0 0 0 18.445-8.986.75.75 0 0 0 0-1.218A60.517 60.517 0 0 0 3.478 2.404Z" />
+      <path d="M3 20h18" />
+      <path d="M3 20V4" />
+      <path d="M8 20V8" />
+      <path d="M12 20v-4" />
+      <path d="M16 20v-8" />
+      <path d="M20 20v-6" />
+      <path d="M4 4h16" />
+      <path d="M4 8h4" />
+      <path d="M4 12h8" />
+      <path d="M4 16h12" />
     </svg>
   );
-};
-
-export const PropellersIcon: FC<IconProps> = ({ className = "w-8 h-8" }) => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="white"
-      className={className}
-    >
-      <path
-        fillRule="evenodd"
-        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-4.28 9.22a.75.75 0 0 0 0 1.06l3 3a.75.75 0 1 0 1.06-1.06l-1.72-1.72h5.69a.75.75 0 0 0 0-1.5h-5.69l1.72-1.72a.75.75 0 0 0-1.06-1.06l-3 3Z"
-        clipRule="evenodd"
-      />
-    </svg>
-  );
-};
+}
