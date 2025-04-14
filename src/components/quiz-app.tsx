@@ -16,7 +16,7 @@ import FinishedQuiz from "@/components/finished-quiz";
 import { useToast } from "@/hooks/use-toast";
 
 export default function QuizApp() {
-  const defaultTime = 30;
+  const defaultTime = 40;
   const { toast } = useToast();
   const router = useRouter();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);

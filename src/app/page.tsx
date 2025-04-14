@@ -48,9 +48,59 @@ export default function CategoriesPage() {
       ),
     },
     {
+      id: "turbocharger",
+      name: "Motor turboalimentado",
+      status: "active",
+      icon: (
+        <div className="bg-gradient-to-br from-blue-300 to-blue-500 p-3 rounded-xl">
+          <EnginesIcon />
+        </div>
+      ),
+    },
+    {
+      id: "radial-engine",
+      name: "Motor Radial",
+      status: "active",
+      icon: (
+        <div className="bg-gradient-to-br from-blue-300 to-blue-500 p-3 rounded-xl">
+          <EnginesIcon />
+        </div>
+      ),
+    },
+    {
+      id: "combustion-chamber-anular",
+      name: "Cámara de combustión anular",
+      status: "active",
+      icon: (
+        <div className="bg-gradient-to-br from-blue-300 to-blue-500 p-3 rounded-xl">
+          <EnginesIcon />
+        </div>
+      ),
+    },
+    {
       id: "jet-engines",
       name: "Motores a Reacción",
       status: "disabled",
+      icon: (
+        <div className="bg-gradient-to-br from-purple-300 to-purple-500 p-3 rounded-xl">
+          <JetEnginesIcon />
+        </div>
+      ),
+    },
+    {
+      id: "centrifugal-compressor",
+      name: "Compresor Centrígufo",
+      status: "active",
+      icon: (
+        <div className="bg-gradient-to-br from-purple-300 to-purple-500 p-3 rounded-xl">
+          <JetEnginesIcon />
+        </div>
+      ),
+    },
+    {
+      id: "turbines",
+      name: "Turbinas",
+      status: "active",
       icon: (
         <div className="bg-gradient-to-br from-purple-300 to-purple-500 p-3 rounded-xl">
           <JetEnginesIcon />

@@ -15,7 +15,9 @@ export const mockTurbochargerQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Motor turboalimentado",
+    category: "turbocharger",
+    explanation:
+      "Los motores turboalimentados se desarrollaron para compensar la menor densidad del aire en altura, comprimiendo el aire ambiente para mantener la potencia.",
   },
   {
     id: "q2",
@@ -28,7 +30,9 @@ export const mockTurbochargerQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Motor turboalimentado",
+    category: "turbocharger",
+    explanation:
+      "El compresor es el componente encargado de comprimir el aire ambiente para que ingrese con mayor presión al motor.",
   },
   {
     id: "q3",
@@ -41,7 +45,9 @@ export const mockTurbochargerQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Motor turboalimentado",
+    category: "turbocharger",
+    explanation:
+      "La turbina, accionada por los gases de escape, impulsa el compresor para que pueda comprimir el aire ambiente.",
   },
   {
     id: "q4",
@@ -54,7 +60,9 @@ export const mockTurbochargerQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Motor turboalimentado",
+    category: "turbocharger",
+    explanation:
+      "La velocidad de la turbina varía en función de la cantidad de gases de escape que circulan por ella.",
   },
   {
     id: "q5",
@@ -67,7 +75,9 @@ export const mockTurbochargerQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Motor turboalimentado",
+    category: "turbocharger",
+    explanation:
+      "Con una baja cantidad de gases de escape, la turbina opera a bajas revoluciones por minuto (rpm).",
   },
   {
     id: "q6",
@@ -80,7 +90,9 @@ export const mockTurbochargerQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Motor turboalimentado",
+    category: "turbocharger",
+    explanation:
+      "Con mayor cantidad de gases de escape, la turbina acelera, alcanzando altas rpm.",
   },
   {
     id: "q7",
@@ -93,7 +105,9 @@ export const mockTurbochargerQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Motor turboalimentado",
+    category: "turbocharger",
+    explanation:
+      "La válvula de derivación es la que se sitúa en la parte de mayor diámetro y dirige el flujo de gases de escape.",
   },
   {
     id: "q8",
@@ -112,7 +126,9 @@ export const mockTurbochargerQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Motor turboalimentado",
+    category: "turbocharger",
+    explanation:
+      "Cerrar la válvula de derivación obliga a que más gases de escape sean redirigidos hacia la turbina, acelerándola.",
   },
   {
     id: "q9",
@@ -131,7 +147,9 @@ export const mockTurbochargerQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Motor turboalimentado",
+    category: "turbocharger",
+    explanation:
+      "Al abrir la válvula de derivación, una mayor cantidad de gases se escapan al exterior, lo que reduce la velocidad de la turbina.",
   },
   {
     id: "q10",
@@ -144,7 +162,9 @@ export const mockTurbochargerQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Motor turboalimentado",
+    category: "turbocharger",
+    explanation:
+      "La válvula de derivación se controla mediante el sistema de control de densidad, que regula el flujo de aceite.",
   },
   {
     id: "q11",
@@ -160,7 +180,9 @@ export const mockTurbochargerQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Motor turboalimentado",
+    category: "turbocharger",
+    explanation:
+      "La cápsula mide la presión y temperatura del aire que entra, informando al sistema para ajustar la válvula de derivación.",
   },
   {
     id: "q12",
@@ -179,7 +201,9 @@ export const mockTurbochargerQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Motor turboalimentado",
+    category: "turbocharger",
+    explanation:
+      "Con presión alta, la cápsula se comprime, lo que activa la apertura de la válvula para liberar el exceso de aceite.",
   },
   {
     id: "q13",
@@ -195,7 +219,9 @@ export const mockTurbochargerQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Motor turboalimentado",
+    category: "turbocharger",
+    explanation:
+      "Con una presión baja, la cápsula se dilata y hace que la válvula se cierre, impidiendo el flujo de aceite.",
   },
   {
     id: "q14",
@@ -214,7 +240,9 @@ export const mockTurbochargerQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Motor turboalimentado",
+    category: "turbocharger",
+    explanation:
+      "La acumulación de aceite empuja un pistón contra un resorte, lo que cierra la válvula de derivación para regular el flujo.",
   },
   {
     id: "q15",
@@ -236,7 +264,9 @@ export const mockTurbochargerQuestions: Question[] = [
     ],
     correctAnswers: ["a1", "a2", "a3"],
     multipleCorrect: true,
-    category: "Motor turboalimentado",
+    category: "turbocharger",
+    explanation:
+      "El funcionamiento implica el ciclo de ingreso y egreso de aceite, donde el pistón y la palanca ayudan a cerrar la válvula de forma transversal.",
   },
   {
     id: "q16",
@@ -252,7 +282,9 @@ export const mockTurbochargerQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Motor turboalimentado",
+    category: "turbocharger",
+    explanation:
+      "El cierre de la válvula de derivación fuerza que más gases sean redirigidos a la turbina, lo que resulta en una aceleración de ésta.",
   },
   {
     id: "q17",
@@ -265,7 +297,9 @@ export const mockTurbochargerQuestions: Question[] = [
     ],
     correctAnswers: ["a1", "a2", "a3"],
     multipleCorrect: true,
-    category: "Motor turboalimentado",
+    category: "turbocharger",
+    explanation:
+      "El sistema incluye el aceite del motor, el control de densidad y la cápsula de presión, que en conjunto regulan la válvula de derivación.",
   },
   {
     id: "q18",
@@ -281,7 +315,9 @@ export const mockTurbochargerQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Motor turboalimentado",
+    category: "turbocharger",
+    explanation:
+      "El retorno dirige el aceite acumulado fuera del sistema, regulando de forma adecuada la apertura de la válvula de derivación.",
   },
   {
     id: "q19",
@@ -303,7 +339,9 @@ export const mockTurbochargerQuestions: Question[] = [
     ],
     correctAnswers: ["a1"],
     multipleCorrect: false,
-    category: "Motor turboalimentado",
+    category: "turbocharger",
+    explanation:
+      "La leva regula la tensión del resorte al establecer un valor patrón de presión, asegurando condiciones óptimas de potencia.",
   },
   {
     id: "q20",
@@ -328,6 +366,8 @@ export const mockTurbochargerQuestions: Question[] = [
     ],
     correctAnswers: ["a1", "a2", "a4"],
     multipleCorrect: true,
-    category: "Motor turboalimentado",
+    category: "turbocharger",
+    explanation:
+      "La leva es esencial para establecer el valor de presión, comprimiendo el resorte y regulando el ingreso de aire, y se posiciona de acuerdo al comando de potencia del motor.",
   },
 ];
