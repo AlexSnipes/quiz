@@ -160,7 +160,7 @@ export default function CategoriesPage() {
     {
       id: "propellers",
       name: "Hélices",
-      status: "disabled",
+      status: "active",
       icon: (
         <div className="bg-gradient-to-br from-purple-300 to-purple-500 p-3 rounded-xl">
           <PropellersIcon />

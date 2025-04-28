@@ -1,6 +1,6 @@
 {
   "name": "quiz-app",
-  "version": "0.254.7",
+  "version": "0.254.27",
   "private": true,
   "scripts": {
     "dev": "next dev",

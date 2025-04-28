@@ -14,6 +14,10 @@ import { mockRadialEngineQuestions } from "@/lib/radial-engine";
 import { mockCentrifugalCompressorQuestions } from "@/lib/centrifugal-compressor";
 import { mockAnularQuestions } from "@/lib/combustion-chamber-anular";
 import { mockTurbinesQuestions } from "@/lib/turbines";
+import { mockPropellersQuestions } from "@/lib/propellers";
+import { mockPropellers4Questions } from "@/lib/propellers-4";
+import { mockPropellers3Questions } from "@/lib/propellers-3";
+import { mockPropellers2Questions } from "@/lib/propellers-2";
 
 export interface Answer {
   id: string;
@@ -49,6 +53,10 @@ export const mockQuestions: Question[] = [
   ...mockCentrifugalCompressorQuestions,
   ...mockAnularQuestions,
   ...mockTurbinesQuestions,
+  ...mockPropellersQuestions,
+  ...mockPropellers2Questions,
+  ...mockPropellers3Questions,
+  ...mockPropellers4Questions,
 ];
 
 export async function loadQuestionsFromPDF(
