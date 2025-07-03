@@ -38,6 +38,26 @@ export default function CategoriesPage() {
       ),
     },
     {
+      id: "rockets",
+      name: "Cohetes",
+      status: "active",
+      icon: (
+        <div className="bg-gradient-to-br from-pink-300 to-red-400 p-3 rounded-xl">
+          <CombustionChamberIcon />
+        </div>
+      ),
+    },
+    {
+      id: "rocket-engine-cooling",
+      name: "Rocket Engine Cooling",
+      status: "active",
+      icon: (
+        <div className="bg-gradient-to-br from-pink-300 to-red-400 p-3 rounded-xl">
+          <CombustionChamberIcon />
+        </div>
+      ),
+    },
+    {
       id: "engines",
       name: "Motores Alternativos",
       status: "active",

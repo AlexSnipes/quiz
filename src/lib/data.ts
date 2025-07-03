@@ -18,6 +18,8 @@ import { mockPropellersQuestions } from "@/lib/propellers";
 import { mockPropellers4Questions } from "@/lib/propellers-4";
 import { mockPropellers3Questions } from "@/lib/propellers-3";
 import { mockPropellers2Questions } from "@/lib/propellers-2";
+import { mockRocketsQuestions } from "@/lib/rockets";
+import { mockRocketEngineCoolingQuestions } from "@/lib/rocket-engine-cooling";
 
 export interface Answer {
   id: string;
@@ -57,6 +59,8 @@ export const mockQuestions: Question[] = [
   ...mockPropellers2Questions,
   ...mockPropellers3Questions,
   ...mockPropellers4Questions,
+  ...mockRocketsQuestions,
+  ...mockRocketEngineCoolingQuestions,
 ];
 
 export async function loadQuestionsFromPDF(
